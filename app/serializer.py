@@ -16,7 +16,7 @@ class PatientSerializer(serializers.ModelSerializer):
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ["person", "photo", "biography"]
+        fields = ["id","person", "photo", "biography"]
         
 
 class MedecinSerializer(serializers.ModelSerializer):

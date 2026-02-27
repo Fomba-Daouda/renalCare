@@ -2,11 +2,11 @@ POST http://127.0.0.1:8000/patients/
 Content-Type: application/json
 
 {
-    "firstName": "Ali",
-    "lastName": "Ben",
-    "email": "ali@mail.com",
+    "firstName": "Salim",
+    "lastName": "AGG",
+    "email": "salim@mail.com",
     "phoneNumber": "0600000000",
-    "address": "Casablanca"
+    "address": "Paris"
 }
 
 ###
@@ -16,7 +16,11 @@ POST http://127.0.0.1:8000/profiles/
 Content-Type: application/json
 
 {
-  "person": "a7f88797-5da6-4532-8bba-569aed4fe100",
-  "photo" : "/media/profiles/img2.jpeg",
+  "person": "8d4cae63-ecb4-4b74-be34-8a3717fbcc00",
+  "photo": "img1.jpeg/",
   "biography": "Patient intéressé par suivi nutritionnel"
 }
+
+
+###
+GET  http://127.0.0.1:8000/profiles/

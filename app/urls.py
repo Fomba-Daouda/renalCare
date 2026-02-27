@@ -12,11 +12,8 @@ from django.conf.urls.static import static
 router = DefaultRouter()
 router.register(r"patients", PatientViewSet)
 router.register(r"medecins", MedecinViewSet)
-router.register(r"profiles", ProfileViewSet)
+router.register(r'profiles', ProfileViewSet, basename='profile')
 
 urlpatterns = [
     path("", include(router.urls)),
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

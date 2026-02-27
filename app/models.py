@@ -1,6 +1,6 @@
 from django.db import models
 import uuid
-
+from django.conf import settings
 
 
 class Person(models.Model):
@@ -26,15 +26,15 @@ class Medecin(Person):
     
 class Profile(models.Model):
     person = models.OneToOneField(
-        Person,
-        on_delete = models.CASCADE,
-        related_name = "profile"
+        Person,  # remplace par Person si tu as un modèle spécifique
+        on_delete=models.CASCADE,
+        related_name='profile'
     )
-    photo = models.ImageField(upload_to="profiles/photos")
+    photo = models.ImageField(upload_to='')
     biography = models.TextField()
-     
+
     def __str__(self):
-        return f"Profile of {self.person.firstName} {self.person.lastName}"
+        return f"Profile de {self.person}"
 
     
 
